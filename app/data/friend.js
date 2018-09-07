@@ -130,7 +130,7 @@ var friendsArray = [
 	},
 	{
 		name: 'Walter',
-		photo: 'http://i.dailymail.co.uk/i/pix/2015/09/02/08/2BE5406100000578-3218820-image-m-25_1441179775589.jpg',
+		photo: 'https://imgur.com/a/ie1OzT3s',
 		scores: [
 			'5',
 			'5',

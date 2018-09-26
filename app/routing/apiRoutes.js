@@ -41,3 +41,5 @@ for (var i = 0; i< friends.length; i++) {
 
 
 friends.push(userData);
+
+res.json(bestMatch);}

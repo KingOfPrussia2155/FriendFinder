@@ -1,25 +1,19 @@
-// Pull in required dependencies
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+var express = require('express')
+var app = express()
+var bodyParser = requrie('body-parser');
 
-// Configure the Express application
-var app = express();
-var PORT = process.env.PORT;
+var PORT = process.env.port || 8080;
 
-// Expose the public directory to access CSS files
-app.use(express.static(path.join(__dirname, './app/public')));
+var jsonParser = bodyParser.json()
 
-// Add middleware for parsing incoming request bodies
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
+var urlencodedParser = bodyParser.urlencoded({ exnteded: false})
 
-// Add the application routes
-require(path.join(__dirname, './app/routing/apiRoutes'))(app);
-require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
+app.use(bodyParser.json({ type: application*+json }))
 
-// Start listening on PORT
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type'}))
+
+app.use(bodyParser.text({ type: 'text/html'}))
+
 app.listen(PORT, function() {
-  console.log('Friend Finder app is listening on PORT: ' + PORT);
-});
+  console.log = ("app listen to PORT: " + PORT);
+})
